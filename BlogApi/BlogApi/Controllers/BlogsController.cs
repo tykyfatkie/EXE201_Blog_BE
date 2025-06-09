@@ -24,7 +24,6 @@ namespace BlogApi.Controllers
         [HttpPost]
         public async Task<ActionResult<BlogDto>> CreateBlog(CreateBlogDto createBlogDto)
         {
-            // Kiểm tra nếu không có giá trị cho ImageUrl thì mặc định là null
             string imageUrl = string.IsNullOrEmpty(createBlogDto.ImageUrl) ? null : createBlogDto.ImageUrl;
 
             var blog = new Blog
