@@ -55,3 +55,4 @@ jobs:
           app-name: 'BlogAPIBE'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DB06EA408A424A62ADBC0EF296A4FEB7 }}
+
