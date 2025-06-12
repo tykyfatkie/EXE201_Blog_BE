@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins", builder =>
     {
-        builder.WithOrigins("http://localhost:3000")  
+        builder.WithOrigins("https://exe-201-blog-fe.vercel.app")  
                .AllowAnyMethod()                   
                .AllowAnyHeader()                    
                .AllowCredentials();                 
