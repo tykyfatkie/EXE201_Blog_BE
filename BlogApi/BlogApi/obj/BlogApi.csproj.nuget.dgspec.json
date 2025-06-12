@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\EXE201\\EXE201_BLOG\\BE\\BlogApi\\BlogApi\\BlogApi.csproj": {}
+    "D:\\FPT\\EXE201\\EXE201_Blog_BE\\BlogApi\\BlogApi\\BlogApi.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\EXE201\\EXE201_BLOG\\BE\\BlogApi\\BlogApi\\BlogApi.csproj": {
+    "D:\\FPT\\EXE201\\EXE201_Blog_BE\\BlogApi\\BlogApi\\BlogApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\EXE201\\EXE201_BLOG\\BE\\BlogApi\\BlogApi\\BlogApi.csproj",
+        "projectUniqueName": "D:\\FPT\\EXE201\\EXE201_Blog_BE\\BlogApi\\BlogApi\\BlogApi.csproj",
         "projectName": "BlogApi",
-        "projectPath": "D:\\FPT\\EXE201\\EXE201_BLOG\\BE\\BlogApi\\BlogApi\\BlogApi.csproj",
+        "projectPath": "D:\\FPT\\EXE201\\EXE201_Blog_BE\\BlogApi\\BlogApi\\BlogApi.csproj",
         "packagesPath": "C:\\Users\\ggfct\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\EXE201\\EXE201_BLOG\\BE\\BlogApi\\BlogApi\\obj\\",
+        "outputPath": "D:\\FPT\\EXE201\\EXE201_Blog_BE\\BlogApi\\BlogApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
