@@ -61,7 +61,7 @@ namespace BlogApi.Controllers
                 Id = b.Id,
                 Title = b.Title,
                 Content = b.Content,
-                ImageUrl = b.ImageUrl,  // Đây là null nếu không có ảnh
+                ImageUrl = b.ImageUrl, 
                 CreatedAt = b.CreatedAt,
                 User = new UserDto
                 {
@@ -72,6 +72,37 @@ namespace BlogApi.Controllers
             }).ToList();
 
             return Ok(blogsDto);
+        }
+
+        // GET: api/Blogs/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<BlogDto>> GetBlogById(int id)
+        {
+            var blog = await _context.Blogs
+                .Include(b => b.User)
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (blog == null)
+            {
+                return NotFound();
+            }
+
+            var blogDto = new BlogDto
+            {
+                Id = blog.Id,
+                Title = blog.Title,
+                Content = blog.Content,
+                ImageUrl = blog.ImageUrl,
+                CreatedAt = blog.CreatedAt,
+                User = new UserDto
+                {
+                    Id = blog.User.Id,
+                    Username = blog.User.Username,
+                    CreatedAt = blog.User.CreatedAt
+                }
+            };
+
+            return Ok(blogDto);
         }
 
         // PUT: api/Blogs/{id}
@@ -86,7 +117,7 @@ namespace BlogApi.Controllers
 
             blog.Title = createBlogDto.Title;
             blog.Content = createBlogDto.Content;
-            blog.ImageUrl = null;  // Không cần thay đổi ảnh, giữ mặc định là null
+            blog.ImageUrl = null;  
 
             _context.Blogs.Update(blog);
             await _context.SaveChangesAsync();
