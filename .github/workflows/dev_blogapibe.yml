@@ -53,6 +53,5 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'BlogAPIBE'
-          slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DB06EA408A424A62ADBC0EF296A4FEB7 }}
